@@ -1,0 +1,101 @@
+=================================================================
+INSTRUÇÕES DE COMPILAÇÃO - O IMPOSTOR (FLUTTER)
+=================================================================
+
+PASSO 1: INSTALAR FLUTTER (Se não tiver instalado)
+---------------------------------------------------
+
+1. Clone o Flutter SDK:
+   git clone https://github.com/flutter/flutter.git -b stable
+
+2. Adicione ao PATH do seu sistema:
+   - No Windows: Adicione C:\flutter\bin ao PATH
+   - No macOS/Linux: export PATH="$PATH:$(pwd)/flutter/bin"
+
+3. Verifique a instalação:
+   flutter doctor
+
+   Isso mostrará se há alguma dependência faltando.
+
+
+PASSO 2: PREPARAR O PROJETO
+----------------------------
+
+1. Abra um terminal/prompt de comando
+2. Navegue até a pasta do projeto:
+   cd caminho/para/jogo_impostor
+
+3. Obtenha as dependências:
+   flutter pub get
+
+
+PASSO 3: COMPILAR E EXECUTAR
+-----------------------------
+
+OPÇÃO A - Executar em um emulador/dispositivo:
+   flutter run
+
+OPÇÃO B - Compilar para APK (Android):
+   flutter build apk --release
+   
+   O arquivo APK será criado em:
+   build/app/outputs/flutter-apk/app-release.apk
+
+OPÇÃO C - Compilar para iOS:
+   flutter build ios --release
+   
+   (Requer macOS e Xcode instalado)
+
+
+PASSO 4: USANDO UMA IDE (Alternativa)
+--------------------------------------
+
+ANDROID STUDIO:
+1. Abra Android Studio
+2. Clique em "File" > "Open"
+3. Navegue até a pasta "jogo_impostor"
+4. Aguarde a sincronização do Gradle
+5. Clique em "Run" (Shift + F10) ou no botão verde de play
+
+VS CODE:
+1. Abra VS Code
+2. Abra a pasta "jogo_impostor"
+3. Pressione Ctrl+Shift+P (Cmd+Shift+P no Mac)
+4. Digite "Flutter: Run" e pressione Enter
+5. Selecione o dispositivo/emulador
+
+
+PASSO 5: INSTALAR NO DISPOSITIVO
+---------------------------------
+
+Após compilar o APK:
+1. Transfira o arquivo APK para seu dispositivo Android
+2. Toque no arquivo para instalar
+3. Permita a instalação de fontes desconhecidas se solicitado
+
+
+SOLUÇÃO DE PROBLEMAS
+---------------------
+
+Problema: "flutter: command not found"
+Solução: Adicione o Flutter ao PATH do seu sistema
+
+Problema: "No devices found"
+Solução: Conecte um dispositivo Android/iOS ou abra um emulador
+
+Problema: Erro de Gradle
+Solução: Execute "flutter clean" e depois "flutter pub get" novamente
+
+Problema: Erro de Java
+Solução: Instale Java 17+ e configure o JDK no Flutter:
+   flutter config --jdk-dir=/caminho/para/jdk
+
+
+DOCUMENTAÇÃO OFICIAL
+---------------------
+
+Para mais informações, visite:
+https://flutter.dev/docs
+https://flutter.dev/docs/get-started/install
+
+=================================================================
